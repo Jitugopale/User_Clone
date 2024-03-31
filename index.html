@@ -1,0 +1,60 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Register</title>
+</head>
+
+<body>
+    <form action="/register" method="post">
+        <h1>Registration</h1>
+        <br>
+        <label for="Username">Username:</label>
+        <input type="text" id="username" name="username">
+        <br>
+        <br>
+        <label for="Password">Password:</label>
+        <input type="password" id="password" name="password">
+        <br>
+        <br>
+        <!-- Social Media Login Options -->
+        <button type="submit">Register</button>
+        <br>
+        <br>
+        <button type="button" onclick="registerWithGoogle()">Register with Google</button><br><br>
+        <button type="button" onclick="registerWithFacebook()">Register with Facebook</button><br><br>
+        <button type="button" onclick="registerWithTwitter()">Register with Twitter</button><br><br>
+        <button type="button" onclick="registerWithGitHub()">Register with GitHub</button>
+        <br>
+        <br>
+        <p>Already have an account</p><a href="./login.html">
+            <p>Please Login</p>
+        </a>
+    </form>
+
+    <script>
+        function registerWithGoogle() {
+            // Redirect to Google authentication URL
+            window.location.href = "https://accounts.google.com/o/oauth2/auth";
+        }
+
+        function registerWithFacebook() {
+            // Redirect to Facebook authentication URL
+            window.location.href = "https://www.facebook.com/login.php";
+        }
+
+        function registerWithTwitter() {
+            // Redirect to Twitter authentication URL
+            window.location.href = "https://twitter.com/login";
+        }
+
+        function registerWithGitHub() {
+            // Redirect to GitHub authentication URL
+            window.location.href = "https://github.com/login";
+        }
+    </script>
+</body>
+
+</html>
